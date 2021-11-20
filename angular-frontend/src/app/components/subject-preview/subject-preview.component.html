@@ -1,0 +1,22 @@
+<div class="row p-4">
+    <form>
+        <div class="card">
+            <div class="card-header">
+                {{subject.name}}
+            </div>
+            <div class="card-header">
+                Students:
+            </div>
+            <div class="card-body" *ngFor="let student of subject.students">
+                <div *ngFor="let st of students">
+                    <div class="card-body" *ngIf="st._id===student" (click)="studentSelected(st._id)"> 
+                        {{st.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container p-4" (click)="addAlumno(subject._id)">
+    <button class="btn btn-primary btn-block">Añadir alumno</button>
+</div>

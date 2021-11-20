@@ -1,0 +1,29 @@
+<div class="col-lg-4 mx-auto"> 
+    <div class="card"> 
+        <div class="card-header"> 
+            Crate a Teacher
+        </div>
+        <div class="card-body"> 
+            <form (submit)="uploadSeguimiento(fecha,fiebre,tos,respirar,malestar)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Fecha" required #fecha>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="¿Tiene fiebre? (s/n)" required #fiebre>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="¿Tiene tos? (s/n)" required #tos>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="¿Tiene dificultad respiratoria? (s/n)" required #respirar>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="¿Tiene malestar? (s/n)" required #malestar>
+                </div>
+                <div class="container p-4">
+                    <button class="btn btn-primary btn-block">save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<button class="btn btn-primary btn-block" (click)="addSeguimiento(persona._id)">Añadir seguimiento</button>
+<div class="row">
+    <div class="col-md-7">
+        <div class="card">
+            <form class="card-body" (submit)="updatePersona(name, email, dni, telefono)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre" [value]="persona.name" #name>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email" [value]="persona.email" #email>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Dni" [value]="persona.dni" #dni>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Telefono" [value]="persona.telefono" #telefono>
+                </div>
+
+                <button class="btn btn-primary btn-block">Update</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let seguimiento of seguimientos">
+        <div class="card card-photo" > 
+            <div class="card-body">
+                Fecha: {{seguimiento.fecha}}
+            </div>
+            <div class="card-body">
+                <div>
+                    Fiebre?: {{seguimiento.fiebre}}
+                </div>
+                <div>
+                    Tos?: {{seguimiento.tos}}
+                </div>   
+                <div>
+                    Dificultad Respiratoria?: {{seguimiento.dificultadRespiratoria}}
+                </div>   
+                <div>
+                    Malestar General?: {{seguimiento.malestarGeneral}}
+                </div>   
+        </div>
+                     
+        </div>
+    </div>
+</div>
+

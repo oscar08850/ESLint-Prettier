@@ -1,0 +1,29 @@
+<div class="row p-4">
+    <form (submit)="addStudent(name,adress,namephone1,phone1,namephone2,phone2)">
+    <div class="card">
+        <div class="card-header">
+            ADD A STUDENT:
+        </div>
+            <div class="form-group  p-4">
+                <input type="text" class="form-control" placeholder="Name" required #name>
+            </div>
+            <div class="form-group  p-4">
+                <input type="text" class="form-control" placeholder="Address" required #adress>
+            </div>
+            <div class="form-group  p-4">
+                <input type="text" class="form-control" placeholder="Name First Phone" required #namephone1>
+                <input type="text" class="form-control p-4" placeholder="First Phone" required #phone1>
+            </div>
+            <div class="form-group p-4">
+                <input type="text" class="form-control" placeholder="Name Second Phone" required #namephone2>
+                <input type="text" class="form-control p-4" placeholder="Second Phone" #phone2>
+            </div>
+            <div class="d-grid gap-2 p-4">
+            <button class="btn btn-primary btn-block">
+                Add
+            </button>
+            </div>
+        </div>
+        </form>
+    </div>
+    

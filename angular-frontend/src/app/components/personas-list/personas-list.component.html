@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let persona of personas">
+        <div class="card card-photo" (click)="upload(persona._id)"> 
+            <div class="card-body">
+                {{persona.name}}
+            </div>
+            <div class="card-body">
+                <div>
+                    Email: {{persona.email}}
+                </div>
+                <div>
+                    Dni: {{persona.dni}}
+                </div>
+                <div>
+                    Telefono: {{persona.telefono}}
+                </div>   
+        </div>
+                     
+        </div>
+    </div>
+</div>
